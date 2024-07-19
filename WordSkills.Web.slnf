@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "path": "WordSkills.sln",
+    "projects": [
+      "src\\WordSkills.Server\\WordSkills.Server.csproj",
+      "src\\WordSkills.Shared\\WordSkills.Shared.csproj",
+      "src\\Client\\WordSkills.Client.Core\\WordSkills.Client.Core.csproj",
+      "src\\Client\\WordSkills.Client.Web\\WordSkills.Client.Web.csproj"
+    ]
+  }
+}
