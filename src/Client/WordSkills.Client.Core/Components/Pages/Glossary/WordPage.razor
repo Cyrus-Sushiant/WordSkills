@@ -1,0 +1,133 @@
+﻿@page "/word"
+@inherits AppComponentBase
+
+<PageTitle>@Localizer[nameof(AppStrings.WordTitle)]</PageTitle>
+
+<div class="page-container">
+    <div class="search-box-container">
+        <BitSearchBox @ref="searchBox"
+                      Style="width: 300px"
+                      OnChange="SearchWords"
+                      OnClear="@(() => SearchWords(""))"
+                      Placeholder="@Localizer[nameof(AppStrings.WordSearchPlaceholder)]" />
+    </div>
+
+    <div class="todo-content">
+        <h1 class="main-title">@Localizer[nameof(AppStrings.WordTitle)]</h1>
+        <div class="add-todo-container">
+            <BitGrid Columns="2" HorizontalAlign="BitGridAlignment.End">
+                <BitGridItem>
+                    <BitTextField @bind-Value="wordModel.MainWord"
+                                  Placeholder="@Localizer[nameof(AppStrings.MainWordPlaceholder)]"
+                                  Class="add-todo-input" />
+                </BitGridItem>
+                <BitGridItem>
+                    <BitTextField @bind-Value="wordModel.Pronunciation"
+                                  Placeholder="@Localizer[nameof(AppStrings.PronunciationPlaceholder)]"
+                                  Class="add-todo-input" />
+                </BitGridItem>
+                <BitGridItem>
+                    <BitTextField @bind-Value="wordModel.EnglishMeaning"
+                                  Placeholder="@Localizer[nameof(AppStrings.EnglishMeaningPlaceholder)]"
+                                  Class="add-todo-input" />
+                </BitGridItem>
+                <BitGridItem>
+                    <BitTextField @bind-Value="wordModel.PersianMeaning"
+                                  Placeholder="@Localizer[nameof(AppStrings.PersianMeaningPlaceholder)]"
+                                  Class="add-todo-input" />
+                </BitGridItem>
+                <BitGridItem ColumnSpan="2">
+                    <BitTextField @bind-Value="wordModel.Example"
+                                  Placeholder="@Localizer[nameof(AppStrings.ExamplePlaceholder)]"
+                                  Class="add-todo-input" />
+                </BitGridItem>
+                <BitGridItem>
+                    <BitTextField @bind-Value="wordModel.Description"
+                                  Placeholder="@Localizer[nameof(AppStrings.DescriptionPlaceholder)]"
+                                  Class="add-todo-input" />
+                </BitGridItem>
+
+                <BitGridItem>
+                    <BitButton IsLoading="isAdding"
+                               OnClick="WrapHandled(AddOrEdit)"
+                               Class="add-todo-button"
+                               Title="@Localizer[nameof(AppStrings.Add)]"
+                               AriaLabel="@Localizer[nameof(AppStrings.Add)]">
+                        @Localizer[nameof(AppStrings.Add)]
+                    </BitButton>
+                </BitGridItem>
+            </BitGrid>
+        </div>
+
+        <div class="todo-list-container">
+            <div class="filter-container">
+                <BitPivot SelectedKey="@selectedFilter" SelectedKeyChanged="FilterTodoItems">
+                    <BitPivotItem Key="@nameof(AppStrings.All)" Class="todo-pivot-tab" HeaderText="@Localizer[nameof(AppStrings.All)]" />
+                </BitPivot>
+                <div class="sort-drp-container">
+                    <BitDropdown Class="sort-todo-drp"
+                                 Items="sortItems"
+                                 OnSelectItem="(BitDropdownItem<string> item) => SortTodoItems(item)"
+                                 DefaultValue="@sortItems[0].Value"
+                                 IsResponsive="true">
+                        <CaretDownTemplate>
+                            <BitIcon IconName="@BitIconName.Sort" Class="sort-todo-icn" />
+                        </CaretDownTemplate>
+                    </BitDropdown>
+                </div>
+            </div>
+
+            <div class="todo-list">
+                @if (isLoading)
+                {
+                    <div class="todo-list-spinner">
+                        <BitSpinner />
+                    </div>
+                }
+                else
+                {
+                    if (viewWords?.Any() is false or null)
+                    {
+                        <div class="todo-list--empty-state">
+                            <img src="/_content/WordSkills.Client.Core/images/backgrounds/empty-todo-list-bg.svg">
+                            <BitLabel>@Localizer[nameof(AppStrings.NoWords)]</BitLabel>
+                        </div>
+                    }
+                    else
+                    {
+                        <BitBasicList Style="width: 100%; height: inherit"
+                                      Items="viewWords"
+                                      EnableVirtualization="true">
+                            <RowTemplate Context="word">
+                                <div class="todo-item@(word.IsInEditMode ? " edit-mode" : "")" role="listitem" @key=@word.Id>
+                                    <div class="todo-info">
+                                        <div>
+                                            @word.MainWord
+                                        </div>
+                                        <div class="todo-item-date">
+                                            @word.CreatedOn.ToLocalTime().ToString("yyyy MMMM dd, HH:mm:ss")
+                                        </div>
+                                    </div>
+
+                                    <div class="todo-btn-group">
+                                        <BitIconButton IconName="@BitIconName.Edit"
+                                                       Title="@Localizer[nameof(AppStrings.Edit)]"
+                                                       AriaLabel="@Localizer[nameof(AppStrings.Edit)]"
+                                                       OnClick="WrapHandled(() => EditMode(word))" />
+
+                                        <BitIconButton IconName="@BitIconName.Delete"
+                                                       Title="@Localizer[nameof(AppStrings.Remove)]"
+                                                       AriaLabel="@Localizer[nameof(AppStrings.Remove)]"
+                                                       OnClick="WrapHandled(() => DeleteWord(word))" />
+                                    </div>
+                                </div>
+                            </RowTemplate>
+                        </BitBasicList>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<ConfirmMessageBox @ref=confirmMessageBox />

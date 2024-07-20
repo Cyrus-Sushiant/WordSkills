@@ -97,24 +97,6 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New category.
-        /// </summary>
-        public static string AddCategory {
-            get {
-                return ResourceManager.GetString("AddCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Add product.
-        /// </summary>
-        public static string AddProduct {
-            get {
-                return ResourceManager.GetString("AddProduct", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         public static string All {
@@ -138,24 +120,6 @@ namespace WordSkills.Shared.Resources {
         public static string AreYouSureWannaDelete {
             get {
                 return ResourceManager.GetString("AreYouSureWannaDelete", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete category {0}.
-        /// </summary>
-        public static string AreYouSureWannaDeleteCategory {
-            get {
-                return ResourceManager.GetString("AreYouSureWannaDeleteCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete product {0}.
-        /// </summary>
-        public static string AreYouSureWannaDeleteProduct {
-            get {
-                return ResourceManager.GetString("AreYouSureWannaDeleteProduct", resourceCulture);
             }
         }
         
@@ -192,51 +156,6 @@ namespace WordSkills.Shared.Resources {
         public static string Cancel {
             get {
                 return ResourceManager.GetString("Cancel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Categories.
-        /// </summary>
-        public static string Categories {
-            get {
-                return ResourceManager.GetString("Categories", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Categories.
-        /// </summary>
-        public static string CategoriesPageTitle {
-            get {
-                return ResourceManager.GetString("CategoriesPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Category.
-        /// </summary>
-        public static string Category {
-            get {
-                return ResourceManager.GetString("Category", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Category entity could not be found.
-        /// </summary>
-        public static string CategoryCouldNotBeFound {
-            get {
-                return ResourceManager.GetString("CategoryCouldNotBeFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This category contain some products, so you can&apos;t delete it.
-        /// </summary>
-        public static string CategoryNotEmpty {
-            get {
-                return ResourceManager.GetString("CategoryNotEmpty", resourceCulture);
             }
         }
         
@@ -457,29 +376,11 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dashboard.
-        /// </summary>
-        public static string Dashboard {
-            get {
-                return ResourceManager.GetString("Dashboard", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Date.
         /// </summary>
         public static string Date {
             get {
                 return ResourceManager.GetString("Date", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Default color picker.
-        /// </summary>
-        public static string DefaultColorPicker {
-            get {
-                return ResourceManager.GetString("DefaultColorPicker", resourceCulture);
             }
         }
         
@@ -511,24 +412,6 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Delete category.
-        /// </summary>
-        public static string DeleteCategory {
-            get {
-                return ResourceManager.GetString("DeleteCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Delete product.
-        /// </summary>
-        public static string DeleteProduct {
-            get {
-                return ResourceManager.GetString("DeleteProduct", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Delete todo item.
         /// </summary>
         public static string DeleteTodoItem {
@@ -538,11 +421,29 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete word.
+        /// </summary>
+        public static string DeleteWord {
+            get {
+                return ResourceManager.GetString("DeleteWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to More info....
+        /// </summary>
+        public static string DescriptionPlaceholder {
+            get {
+                return ResourceManager.GetString("DescriptionPlaceholder", resourceCulture);
             }
         }
         
@@ -570,24 +471,6 @@ namespace WordSkills.Shared.Resources {
         public static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Edit category.
-        /// </summary>
-        public static string EditCategory {
-            get {
-                return ResourceManager.GetString("EditCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Edit product.
-        /// </summary>
-        public static string EditProduct {
-            get {
-                return ResourceManager.GetString("EditProduct", resourceCulture);
             }
         }
         
@@ -736,20 +619,11 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter category name.
+        ///   Looks up a localized string similar to English meaning.
         /// </summary>
-        public static string EnterCategoryName {
+        public static string EnglishMeaningPlaceholder {
             get {
-                return ResourceManager.GetString("EnterCategoryName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enter product name.
-        /// </summary>
-        public static string EnterProductName {
-            get {
-                return ResourceManager.GetString("EnterProductName", resourceCulture);
+                return ResourceManager.GetString("EnglishMeaningPlaceholder", resourceCulture);
             }
         }
         
@@ -759,6 +633,15 @@ namespace WordSkills.Shared.Resources {
         public static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Example.
+        /// </summary>
+        public static string ExamplePlaceholder {
+            get {
+                return ResourceManager.GetString("ExamplePlaceholder", resourceCulture);
             }
         }
         
@@ -997,20 +880,11 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Last 30 days category count.
+        ///   Looks up a localized string similar to Word.
         /// </summary>
-        public static string Last30DaysCategoryCount {
+        public static string MainWordPlaceholder {
             get {
-                return ResourceManager.GetString("Last30DaysCategoryCount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Last 30 days product count.
-        /// </summary>
-        public static string Last30DaysProductCount {
-            get {
-                return ResourceManager.GetString("Last30DaysProductCount", resourceCulture);
+                return ResourceManager.GetString("MainWordPlaceholder", resourceCulture);
             }
         }
         
@@ -1141,11 +1015,11 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Offline Edit profile.
+        ///   Looks up a localized string similar to No words yet.
         /// </summary>
-        public static string OfflineEditProfileTitle {
+        public static string NoWords {
             get {
-                return ResourceManager.GetString("OfflineEditProfileTitle", resourceCulture);
+                return ResourceManager.GetString("NoWords", resourceCulture);
             }
         }
         
@@ -1227,6 +1101,15 @@ namespace WordSkills.Shared.Resources {
         public static string PasswordPlaceholder {
             get {
                 return ResourceManager.GetString("PasswordPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Persian meaning.
+        /// </summary>
+        public static string PersianMeaningPlaceholder {
+            get {
+                return ResourceManager.GetString("PersianMeaningPlaceholder", resourceCulture);
             }
         }
         
@@ -1321,105 +1204,6 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Product category.
-        /// </summary>
-        public static string ProductCategory {
-            get {
-                return ResourceManager.GetString("ProductCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Product entity could not be found.
-        /// </summary>
-        public static string ProductCouldNotBeFound {
-            get {
-                return ResourceManager.GetString("ProductCouldNotBeFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products.
-        /// </summary>
-        public static string Products {
-            get {
-                return ResourceManager.GetString("Products", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Product sales.
-        /// </summary>
-        public static string ProductSales {
-            get {
-                return ResourceManager.GetString("ProductSales", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This chart shows the sale number of each product..
-        /// </summary>
-        public static string ProductSalesText {
-            get {
-                return ResourceManager.GetString("ProductSalesText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products count.
-        /// </summary>
-        public static string ProductsCount {
-            get {
-                return ResourceManager.GetString("ProductsCount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products count per category chart.
-        /// </summary>
-        public static string ProductsCountPerCategoryChart {
-            get {
-                return ResourceManager.GetString("ProductsCountPerCategoryChart", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This chart shows the number of products in each category..
-        /// </summary>
-        public static string ProductsCountPerCategoryChartText {
-            get {
-                return ResourceManager.GetString("ProductsCountPerCategoryChartText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products.
-        /// </summary>
-        public static string ProductsPageTitle {
-            get {
-                return ResourceManager.GetString("ProductsPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Products percentage per category.
-        /// </summary>
-        public static string ProductsPercentagePerCategory {
-            get {
-                return ResourceManager.GetString("ProductsPercentagePerCategory", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This chart shows the percentage of products in each category..
-        /// </summary>
-        public static string ProductsPercentagePerCategoryText {
-            get {
-                return ResourceManager.GetString("ProductsPercentagePerCategoryText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Profile Image.
         /// </summary>
         public static string ProfileImage {
@@ -1443,6 +1227,15 @@ namespace WordSkills.Shared.Resources {
         public static string ProfileUpdatedSuccessfullyMessage {
             get {
                 return ResourceManager.GetString("ProfileUpdatedSuccessfullyMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pronunciation.
+        /// </summary>
+        public static string PronunciationPlaceholder {
+            get {
+                return ResourceManager.GetString("PronunciationPlaceholder", resourceCulture);
             }
         }
         
@@ -1645,29 +1438,11 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search on name.
-        /// </summary>
-        public static string SearchOnName {
-            get {
-                return ResourceManager.GetString("SearchOnName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Select your birth date.
         /// </summary>
         public static string SelectBirthDate {
             get {
                 return ResourceManager.GetString("SelectBirthDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Select category.
-        /// </summary>
-        public static string SelectCategory {
-            get {
-                return ResourceManager.GetString("SelectCategory", resourceCulture);
             }
         }
         
@@ -2239,24 +2014,6 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Total categories.
-        /// </summary>
-        public static string TotalCategories {
-            get {
-                return ResourceManager.GetString("TotalCategories", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Total products.
-        /// </summary>
-        public static string TotalProducts {
-            get {
-                return ResourceManager.GetString("TotalProducts", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Sign in with Twitter (X).
         /// </summary>
         public static string TwitterSignInButtonText {
@@ -2460,6 +2217,33 @@ namespace WordSkills.Shared.Resources {
         public static string WaitForTwoFactorTokenRequestResendDelay {
             get {
                 return ResourceManager.GetString("WaitForTwoFactorTokenRequestResendDelay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Word could not be found.
+        /// </summary>
+        public static string WordCouldNotBeFound {
+            get {
+                return ResourceManager.GetString("WordCouldNotBeFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search word....
+        /// </summary>
+        public static string WordSearchPlaceholder {
+            get {
+                return ResourceManager.GetString("WordSearchPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Word.
+        /// </summary>
+        public static string WordTitle {
+            get {
+                return ResourceManager.GetString("WordTitle", resourceCulture);
             }
         }
         

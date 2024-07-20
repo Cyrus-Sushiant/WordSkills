@@ -1,6 +1,7 @@
 ﻿using WordSkills.Shared.Dtos.Identity;
 using WordSkills.Shared.Dtos.Todo;
 using Riok.Mapperly.Abstractions;
+using WordSkills.Shared.Dtos.Glossary;
 
 namespace WordSkills.Shared;
 
@@ -17,6 +18,7 @@ namespace WordSkills.Shared;
 public static partial class Mapper
 {
     public static partial void Patch(this TodoItemDto source, TodoItemDto destination);
+    public static partial void Patch(this WordDto source, WordDto destination);
     public static partial void Patch(this UserDto source, UserDto destination);
     public static partial void Patch(this EditUserDto source, UserDto destination);
     public static partial void Patch(this UserDto source, EditUserDto destination);

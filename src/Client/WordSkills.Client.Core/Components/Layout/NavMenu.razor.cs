@@ -29,6 +29,12 @@ public partial class NavMenu
             },
             new()
             {
+                Text = Localizer[nameof(AppStrings.WordTitle)],
+                IconName = BitIconName.WordDocument,
+                Url = "/word",
+            },
+            new()
+            {
                 Text = Localizer[nameof(AppStrings.TodoTitle)],
                 IconName = BitIconName.ToDoLogoOutline,
                 Url = "/todo",

@@ -2,6 +2,7 @@
 using WordSkills.Server.Models.Identity;
 using Microsoft.AspNetCore.DataProtection.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using WordSkills.Server.Models.Glossary;
 
 namespace WordSkills.Server.Data;
 
@@ -11,6 +12,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
     public DbSet<DataProtectionKey> DataProtectionKeys { get; set; }
 
     public DbSet<TodoItem> TodoItems { get; set; }
+    public DbSet<Word> Words { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

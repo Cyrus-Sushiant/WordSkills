@@ -155,4 +155,10 @@
         "minify": { "enabled": false },
         "options": { "sourceMap": false }
     },
+    {
+        "outputFile": "Components/Pages/Glossary/WordPage.razor.css",
+        "inputFile": "Components/Pages/Glossary/WordPage.razor.scss",
+        "minify": { "enabled": false },
+        "options": { "sourceMap": false }
+    }
 ]

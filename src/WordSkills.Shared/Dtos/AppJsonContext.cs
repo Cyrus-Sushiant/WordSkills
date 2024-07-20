@@ -1,5 +1,6 @@
 ﻿using WordSkills.Shared.Dtos.Todo;
 using WordSkills.Shared.Dtos.Identity;
+using WordSkills.Shared.Dtos.Glossary;
 
 namespace WordSkills.Shared.Dtos;
 
@@ -12,6 +13,9 @@ namespace WordSkills.Shared.Dtos;
 [JsonSerializable(typeof(TodoItemDto))]
 [JsonSerializable(typeof(PagedResult<TodoItemDto>))]
 [JsonSerializable(typeof(List<TodoItemDto>))]
+[JsonSerializable(typeof(WordDto))]
+[JsonSerializable(typeof(PagedResult<WordDto>))]
+[JsonSerializable(typeof(List<WordDto>))]
 [JsonSerializable(typeof(IdentityRequestDto))]
 [JsonSerializable(typeof(SignInRequestDto))]
 [JsonSerializable(typeof(SignInResponseDto))]
