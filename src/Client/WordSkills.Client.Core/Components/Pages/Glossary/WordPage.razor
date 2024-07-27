@@ -101,12 +101,43 @@
                             <RowTemplate Context="word">
                                 <div class="todo-item@(word.IsInEditMode ? " edit-mode" : "")" role="listitem" @key=@word.Id>
                                     <div class="todo-info">
-                                        <div>
-                                            @word.MainWord
-                                        </div>
-                                        <div class="todo-item-date">
-                                            @word.CreatedOn.ToLocalTime().ToString("yyyy MMMM dd, HH:mm:ss")
-                                        </div>
+                                        <BitGrid Columns="2" HorizontalAlign="BitGridAlignment.End">
+                                            <BitGridItem>
+                                                <strong>
+                                                    @word.MainWord
+                                                </strong>
+                                            </BitGridItem>
+                                            <BitGridItem>
+                                                <i>
+                                                    <small>
+                                                        @word.Pronunciation
+                                                    </small>
+                                                </i>
+                                            </BitGridItem>
+                                            <BitGridItem ColumnSpan="2">
+                                                @word.EnglishMeaning
+                                            </BitGridItem>
+                                            <BitGridItem ColumnSpan="2">
+                                                <small>
+                                                    @word.PersianMeaning
+                                                </small>
+                                            </BitGridItem>
+                                            <BitGridItem ColumnSpan="2">
+                                                <small>
+                                                    @word.Description
+                                                </small>
+                                            </BitGridItem>
+                                            <BitGridItem ColumnSpan="2">
+                                                <small>
+                                                    @word.Example
+                                                </small>
+                                            </BitGridItem>
+                                            <BitGridItem ColumnSpan="2">
+                                                <small>
+                                                    @word.CreatedOn.ToLocalTime().ToString("yyyy MMMM dd, HH:mm:ss")
+                                                </small>
+                                            </BitGridItem>
+                                        </BitGrid>
                                     </div>
 
                                     <div class="todo-btn-group">
