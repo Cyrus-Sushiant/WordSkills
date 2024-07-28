@@ -195,6 +195,9 @@
   <data name="ChangeEmailTitle" xml:space="preserve">
     <value>Change email</value>
   </data>
+  <data name="ChangePasswordTitle" xml:space="preserve">
+    <value>Change password</value>
+  </data>
   <data name="ChangePhoneNumberTitle" xml:space="preserve">
     <value>Change phone number</value>
   </data>
@@ -857,5 +860,8 @@
   </data>
   <data name="DeleteWord" xml:space="preserve">
     <value>Delete word</value>
+  </data>
+  <data name="DeleteTodoItem1" xml:space="preserve">
+    <value />
   </data>
 </root>

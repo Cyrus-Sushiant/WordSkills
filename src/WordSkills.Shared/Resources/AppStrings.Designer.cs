@@ -169,6 +169,15 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change password.
+        /// </summary>
+        public static string ChangePasswordTitle {
+            get {
+                return ResourceManager.GetString("ChangePasswordTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Change phone number.
         /// </summary>
         public static string ChangePhoneNumberTitle {
@@ -417,6 +426,15 @@ namespace WordSkills.Shared.Resources {
         public static string DeleteTodoItem {
             get {
                 return ResourceManager.GetString("DeleteTodoItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string DeleteTodoItem1 {
+            get {
+                return ResourceManager.GetString("DeleteTodoItem1", resourceCulture);
             }
         }
         

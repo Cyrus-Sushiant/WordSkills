@@ -195,6 +195,9 @@
   <data name="ChangeEmailTitle" xml:space="preserve">
     <value>تغییر ایمیل</value>
   </data>
+  <data name="ChangeEmailTitle1" xml:space="preserve">
+    <value>تغییر ایمیل</value>
+  </data>
   <data name="ChangePhoneNumberTitle" xml:space="preserve">
     <value>تغییر شماره تلفن</value>
   </data>

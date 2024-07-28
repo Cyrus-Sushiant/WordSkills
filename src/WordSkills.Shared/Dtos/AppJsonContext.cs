@@ -34,6 +34,7 @@ namespace WordSkills.Shared.Dtos;
 [JsonSerializable(typeof(ResetPasswordRequestDto))]
 [JsonSerializable(typeof(TwoFactorAuthRequestDto))]
 [JsonSerializable(typeof(TwoFactorAuthResponseDto))]
+[JsonSerializable(typeof(ChangePasswordRequestDto))]
 public partial class AppJsonContext : JsonSerializerContext
 {
 }
