@@ -22,6 +22,7 @@
         <PackageReference Include="Bit.BlazorUI.Assets" Version="8.10.0-pre-03" />
                 <PackageReference Include="Bit.CodeAnalyzers" Version="8.10.0-pre-03" PrivateAssets="all" />
         <PackageReference Include="Bit.SourceGenerators" Version="8.10.0-pre-03" PrivateAssets="all" />
+        <PackageReference Include="BytePlatform.Shared" Version="1.0.0-pre-10" />
         <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.7" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.7" />
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.7" />
@@ -39,6 +40,7 @@
         <Using Include="WordSkills.Client.Core.Components.Layout" />
         <Using Include="WordSkills.Client.Core.Services.Contracts" />
         <Using Include="WordSkills.Client.Core.Services" />
+        <Using Include="BytePlatform.Shared.Extensions" />
 
         <Watch Remove="*.scss" />
     </ItemGroup>

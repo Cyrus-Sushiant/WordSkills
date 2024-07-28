@@ -864,4 +864,22 @@
   <data name="DeleteTodoItem1" xml:space="preserve">
     <value />
   </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="ThisWordHasAlreadyBeenSaved" xml:space="preserve">
+    <value>This word has already been saved!</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="YouCanAddThisWord" xml:space="preserve">
+    <value>You can add this word.</value>
+  </data>
+  <data name="EnterYourWord" xml:space="preserve">
+    <value>Enter your word...</value>
+  </data>
+  <data name="CheckExistsWord" xml:space="preserve">
+    <value>Check exists word</value>
+  </data>
 </root>

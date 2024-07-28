@@ -9,7 +9,7 @@ public partial class WordController : AppControllerBase, IWordController
     [HttpGet, EnableQuery]
     public IQueryable<WordDto> Get()
     {
-        var userId = User.GetUserId();
+        var userId = User.GetUserId<int>();
 
         return DbContext.Words
             .Where(t => t.UserId == userId)
@@ -48,7 +48,7 @@ public partial class WordController : AppControllerBase, IWordController
     {
         var entityToAdd = dto.Map();
 
-        entityToAdd.UserId = User.GetUserId();
+        entityToAdd.UserId = User.GetUserId<int>();
 
         entityToAdd.CreatedOn = entityToAdd.ModifiedOn = DateTimeOffset.UtcNow;
 

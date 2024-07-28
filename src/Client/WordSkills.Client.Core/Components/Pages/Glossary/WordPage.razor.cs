@@ -15,6 +15,7 @@ public partial class WordPage
     private string? selectedSort;
     private string? selectedFilter;
     private WordDto wordModel = new();
+    private BitSnackBar snackBar = default!;
     private ConfirmMessageBox confirmMessageBox = default!;
     private IList<WordDto> allWords = default!;
     private IList<WordDto> viewWords = default!;
@@ -26,7 +27,7 @@ public partial class WordPage
         _ = keyboard.Add(ButilKeyCodes.KeyF, () => _ = searchBox.FocusAsync(), ButilModifiers.Ctrl);
 
         selectedFilter = nameof(AppStrings.All);
-        selectedSort = nameof(AppStrings.Alphabetical);
+        selectedSort = nameof(AppStrings.Date);
 
         sortItems =
         [
@@ -60,7 +61,7 @@ public partial class WordPage
         viewWords = allWords
             .Where(t => WordIsVisible(t))
             .OrderByIf(selectedSort == nameof(AppStrings.Alphabetical), t => t.MainWord!)
-            .OrderByIf(selectedSort == nameof(AppStrings.Date), t => t.CreatedOn!)
+            .OrderByDescendingIf(selectedSort == nameof(AppStrings.Date), t => t.CreatedOn!)
             .ToList();
     }
 
@@ -148,6 +149,36 @@ public partial class WordPage
                 allWords.Remove(word);
 
                 viewWords.Remove(word);
+            }
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task CheckIfExist()
+    {
+        if (isLoading) return;
+
+        try
+        {
+            if (wordModel.MainWord.HasNoValue())
+            {
+                await snackBar.Error(Localizer.GetString(nameof(AppStrings.Warning)), Localizer.GetString(nameof(AppStrings.EnterYourWord)));
+
+                return;
+            }
+
+            var exist = allWords.Any(w => w.Id != wordModel.Id && w.MainWord!.Equals(wordModel.MainWord, StringComparison.OrdinalIgnoreCase));
+
+            if (exist)
+            {
+                await snackBar.Warning(Localizer.GetString(nameof(AppStrings.Warning)), Localizer.GetString(nameof(AppStrings.ThisWordHasAlreadyBeenSaved)));
+            }
+            else
+            {
+                await snackBar.Success(Localizer.GetString(nameof(AppStrings.Success)), Localizer.GetString(nameof(AppStrings.YouCanAddThisWord)));
             }
         }
         finally

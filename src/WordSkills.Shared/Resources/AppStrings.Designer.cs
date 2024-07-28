@@ -196,6 +196,15 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check exists word.
+        /// </summary>
+        public static string CheckExistsWord {
+            get {
+                return ResourceManager.GetString("CheckExistsWord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check your Spam/Junk, if you could not find it in the Inbox..
         /// </summary>
         public static string CheckSpamMailMessage {
@@ -642,6 +651,15 @@ namespace WordSkills.Shared.Resources {
         public static string EnglishMeaningPlaceholder {
             get {
                 return ResourceManager.GetString("EnglishMeaningPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your word....
+        /// </summary>
+        public static string EnterYourWord {
+            get {
+                return ResourceManager.GetString("EnterYourWord", resourceCulture);
             }
         }
         
@@ -1591,6 +1609,15 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Success.
+        /// </summary>
+        public static string Success {
+            get {
+                return ResourceManager.GetString("Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is accept terms?.
         /// </summary>
         public static string TermsAccepted {
@@ -1960,6 +1987,15 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This word has already been saved!.
+        /// </summary>
+        public static string ThisWordHasAlreadyBeenSaved {
+            get {
+                return ResourceManager.GetString("ThisWordHasAlreadyBeenSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Title.
         /// </summary>
         public static string Title {
@@ -2239,6 +2275,15 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string Warning {
+            get {
+                return ResourceManager.GetString("Warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Word could not be found.
         /// </summary>
         public static string WordCouldNotBeFound {
@@ -2280,6 +2325,15 @@ namespace WordSkills.Shared.Resources {
         public static string YouAreSignInAs {
             get {
                 return ResourceManager.GetString("YouAreSignInAs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can add this word..
+        /// </summary>
+        public static string YouCanAddThisWord {
+            get {
+                return ResourceManager.GetString("YouCanAddThisWord", resourceCulture);
             }
         }
         

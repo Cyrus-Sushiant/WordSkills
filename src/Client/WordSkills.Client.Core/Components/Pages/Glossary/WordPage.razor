@@ -17,9 +17,16 @@
         <div class="add-todo-container">
             <BitGrid Columns="2" HorizontalAlign="BitGridAlignment.End">
                 <BitGridItem>
-                    <BitTextField @bind-Value="wordModel.MainWord"
-                                  Placeholder="@Localizer[nameof(AppStrings.MainWordPlaceholder)]"
-                                  Class="add-todo-input" />
+                    <div class="main-word-container">
+                        <BitTextField @bind-Value="wordModel.MainWord"
+                                      Placeholder="@Localizer[nameof(AppStrings.MainWordPlaceholder)]"
+                                      Class="add-todo-input" />
+                        <BitIconButton IconName="@BitIconName.SearchIssue"
+                                       OnClick="WrapHandled(CheckIfExist)"
+                                       Style="border-radius: 2px;border: #D7D7D7 solid 1px; border-left: none;"
+                                       Title="@Localizer[nameof(AppStrings.CheckExistsWord)]"
+                                       AriaLabel="@Localizer[nameof(AppStrings.CheckExistsWord)]" />
+                    </div>
                 </BitGridItem>
                 <BitGridItem>
                     <BitTextField @bind-Value="wordModel.Pronunciation"
@@ -68,7 +75,7 @@
                     <BitDropdown Class="sort-todo-drp"
                                  Items="sortItems"
                                  OnSelectItem="(BitDropdownItem<string> item) => SortTodoItems(item)"
-                                 DefaultValue="@sortItems[0].Value"
+                                 DefaultValue="@sortItems[1].Value"
                                  IsResponsive="true">
                         <CaretDownTemplate>
                             <BitIcon IconName="@BitIconName.Sort" Class="sort-todo-icn" />
@@ -154,6 +161,7 @@
                                 </div>
                             </RowTemplate>
                         </BitBasicList>
+                        <BitMessage Severity="BitSeverity.Info">Total words are @(allWords.Count).</BitMessage>
                     }
                 }
             </div>
@@ -162,3 +170,5 @@
 </div>
 
 <ConfirmMessageBox @ref=confirmMessageBox />
+
+<BitSnackBar @ref="snackBar" />
