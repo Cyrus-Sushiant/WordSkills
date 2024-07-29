@@ -187,7 +187,8 @@ public partial class WordPage
                 return;
             }
 
-            var exist = allWords.Any(w => w.Id != wordModel.Id && w.MainWord!.Equals(wordModel.MainWord, StringComparison.OrdinalIgnoreCase));
+            var searchContent = wordModel.MainWord.TrimIfHasValue();
+            var exist = allWords.Any(w => w.Id != wordModel.Id && w.MainWord!.Equals(searchContent, StringComparison.OrdinalIgnoreCase));
 
             if (exist)
             {
