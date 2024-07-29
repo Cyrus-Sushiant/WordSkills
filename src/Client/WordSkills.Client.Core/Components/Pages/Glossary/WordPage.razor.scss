@@ -33,6 +33,12 @@
     justify-content: flex-start;
 }
 
+.main-title-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
 .main-title {
     margin: 0;
     font-weight: 600;

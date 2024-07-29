@@ -13,58 +13,70 @@
     </div>
 
     <div class="todo-content">
-        <h1 class="main-title">@Localizer[nameof(AppStrings.WordTitle)]</h1>
-        <div class="add-todo-container">
-            <BitGrid Columns="2" HorizontalAlign="BitGridAlignment.End">
-                <BitGridItem>
-                    <div class="main-word-container">
-                        <BitTextField @bind-Value="wordModel.MainWord"
-                                      Placeholder="@Localizer[nameof(AppStrings.MainWordPlaceholder)]"
-                                      Class="add-todo-input" />
-                        <BitIconButton IconName="@BitIconName.SearchIssue"
-                                       OnClick="WrapHandled(CheckIfExist)"
-                                       Style="border-radius: 2px;border: #D7D7D7 solid 1px; border-left: none;"
-                                       Title="@Localizer[nameof(AppStrings.CheckExistsWord)]"
-                                       AriaLabel="@Localizer[nameof(AppStrings.CheckExistsWord)]" />
-                    </div>
-                </BitGridItem>
-                <BitGridItem>
-                    <BitTextField @bind-Value="wordModel.Pronunciation"
-                                  Placeholder="@Localizer[nameof(AppStrings.PronunciationPlaceholder)]"
-                                  Class="add-todo-input" />
-                </BitGridItem>
-                <BitGridItem>
-                    <BitTextField @bind-Value="wordModel.EnglishMeaning"
-                                  Placeholder="@Localizer[nameof(AppStrings.EnglishMeaningPlaceholder)]"
-                                  Class="add-todo-input" />
-                </BitGridItem>
-                <BitGridItem>
-                    <BitTextField @bind-Value="wordModel.PersianMeaning"
-                                  Placeholder="@Localizer[nameof(AppStrings.PersianMeaningPlaceholder)]"
-                                  Class="add-todo-input" />
-                </BitGridItem>
-                <BitGridItem ColumnSpan="2">
-                    <BitTextField @bind-Value="wordModel.Example"
-                                  Placeholder="@Localizer[nameof(AppStrings.ExamplePlaceholder)]"
-                                  Class="add-todo-input" />
-                </BitGridItem>
-                <BitGridItem>
-                    <BitTextField @bind-Value="wordModel.Description"
-                                  Placeholder="@Localizer[nameof(AppStrings.DescriptionPlaceholder)]"
-                                  Class="add-todo-input" />
-                </BitGridItem>
-
-                <BitGridItem>
-                    <BitButton IsLoading="isAdding"
-                               OnClick="WrapHandled(AddOrEdit)"
-                               Class="add-todo-button"
-                               Title="@Localizer[nameof(AppStrings.Add)]"
-                               AriaLabel="@Localizer[nameof(AppStrings.Add)]">
-                        @Localizer[nameof(AppStrings.Add)]
-                    </BitButton>
-                </BitGridItem>
-            </BitGrid>
+        <div class="main-title-container">
+            <h1 class="main-title">@Localizer[nameof(AppStrings.WordTitle)]</h1>
+            <BitIconButton IconName="@BitIconName.AddToShoppingList"
+                           OnClick="WrapHandled(() => showAddOrEditBox = !showAddOrEditBox)"
+                           Title="@Localizer[nameof(AppStrings.ShowBox)]"
+                           AriaLabel="@Localizer[nameof(AppStrings.ShowBox)]" />
         </div>
+        @if (showAddOrEditBox)
+        {
+            <div class="add-todo-container">
+                <BitGrid Columns="2" HorizontalAlign="BitGridAlignment.End">
+                    <BitGridItem>
+                        <div class="main-word-container">
+                            <BitTextField @bind-Value="wordModel.MainWord"
+                                          Placeholder="@Localizer[nameof(AppStrings.MainWordPlaceholder)]"
+                                          Class="add-todo-input" />
+                            <BitIconButton IconName="@BitIconName.SearchIssue"
+                                           OnClick="WrapHandled(CheckIfExist)"
+                                           Style="border-radius: 2px;border: #D7D7D7 solid 1px; border-left: none;"
+                                           Title="@Localizer[nameof(AppStrings.CheckExistsWord)]"
+                                           AriaLabel="@Localizer[nameof(AppStrings.CheckExistsWord)]" />
+                        </div>
+                    </BitGridItem>
+                    <BitGridItem>
+                        <BitTextField @bind-Value="wordModel.Pronunciation"
+                                      Placeholder="@Localizer[nameof(AppStrings.PronunciationPlaceholder)]"
+                                      Class="add-todo-input" />
+                    </BitGridItem>
+                    <BitGridItem>
+                        <BitTextField @bind-Value="wordModel.EnglishMeaning"
+                                      Placeholder="@Localizer[nameof(AppStrings.EnglishMeaningPlaceholder)]"
+                                      Class="add-todo-input" />
+                    </BitGridItem>
+                    <BitGridItem>
+                        <BitTextField @bind-Value="wordModel.PersianMeaning"
+                                      Placeholder="@Localizer[nameof(AppStrings.PersianMeaningPlaceholder)]"
+                                      Class="add-todo-input" />
+                    </BitGridItem>
+                    <BitGridItem ColumnSpan="2">
+                        <BitTextField @bind-Value="wordModel.Example"
+                                      Placeholder="@Localizer[nameof(AppStrings.ExamplePlaceholder)]"
+                                      Class="add-todo-input" />
+                    </BitGridItem>
+                    <BitGridItem>
+                        <BitTextField @bind-Value="wordModel.Description"
+                                      Placeholder="@Localizer[nameof(AppStrings.DescriptionPlaceholder)]"
+                                      Class="add-todo-input" />
+                    </BitGridItem>
+
+                    <BitGridItem>
+                        @{
+                            var btnTitle = wordModel.IsInEditMode ? Localizer[nameof(AppStrings.Edit)] : Localizer[nameof(AppStrings.Add)];
+                        }
+                        <BitButton IsLoading="isAdding"
+                                   OnClick="WrapHandled(AddOrEdit)"
+                                   Class="add-todo-button"
+                                   Title="@btnTitle"
+                                   AriaLabel="@btnTitle">
+                            @btnTitle
+                        </BitButton>
+                    </BitGridItem>
+                </BitGrid>
+            </div>
+        }
 
         <div class="todo-list-container">
             <div class="filter-container">

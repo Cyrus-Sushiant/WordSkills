@@ -858,12 +858,6 @@
   <data name="NoWords" xml:space="preserve">
     <value>No words yet</value>
   </data>
-  <data name="DeleteWord" xml:space="preserve">
-    <value>Delete word</value>
-  </data>
-  <data name="DeleteTodoItem1" xml:space="preserve">
-    <value />
-  </data>
   <data name="Warning" xml:space="preserve">
     <value>Warning</value>
   </data>
@@ -881,5 +875,17 @@
   </data>
   <data name="CheckExistsWord" xml:space="preserve">
     <value>Check exists word</value>
+  </data>
+  <data name="DataSavedSuccessfully" xml:space="preserve">
+    <value>Data saved successfully.</value>
+  </data>
+  <data name="DeleteWord" xml:space="preserve">
+    <value>Delete word</value>
+  </data>
+  <data name="ShowBox" xml:space="preserve">
+    <value>Show box</value>
+  </data>
+  <data name="DataRemovedSuccessfully" xml:space="preserve">
+    <value>Data removed successfully.</value>
   </data>
 </root>

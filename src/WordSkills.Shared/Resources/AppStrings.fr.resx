@@ -195,9 +195,6 @@
   <data name="ChangeEmailTitle" xml:space="preserve">
     <value>Changer l'e-mail</value>
   </data>
-  <data name="ChangeEmailTitle1" xml:space="preserve">
-    <value>Changer l'e-mail</value>
-  </data>
   <data name="ChangePhoneNumberTitle" xml:space="preserve">
     <value>Changer de numéro de téléphone</value>
   </data>
@@ -822,8 +819,5 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="NoWords" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="DeleteTodoItem1" xml:space="preserve">
-    <value>Supprimer l'élément à faire</value>
   </data>
 </root>

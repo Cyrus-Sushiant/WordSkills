@@ -16,5 +16,5 @@ public class WordDto
     public DateTimeOffset ModifiedOn { get; set; }
 
     [JsonIgnore]
-    public bool IsInEditMode { get; set; }
+    public bool IsInEditMode => Id > 0;
 }

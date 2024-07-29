@@ -394,6 +394,24 @@ namespace WordSkills.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data removed successfully..
+        /// </summary>
+        public static string DataRemovedSuccessfully {
+            get {
+                return ResourceManager.GetString("DataRemovedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data saved successfully..
+        /// </summary>
+        public static string DataSavedSuccessfully {
+            get {
+                return ResourceManager.GetString("DataSavedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date.
         /// </summary>
         public static string Date {
@@ -435,15 +453,6 @@ namespace WordSkills.Shared.Resources {
         public static string DeleteTodoItem {
             get {
                 return ResourceManager.GetString("DeleteTodoItem", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string DeleteTodoItem1 {
-            get {
-                return ResourceManager.GetString("DeleteTodoItem1", resourceCulture);
             }
         }
         
@@ -1497,6 +1506,15 @@ namespace WordSkills.Shared.Resources {
         public static string ServerConnectionException {
             get {
                 return ResourceManager.GetString("ServerConnectionException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show box.
+        /// </summary>
+        public static string ShowBox {
+            get {
+                return ResourceManager.GetString("ShowBox", resourceCulture);
             }
         }
         

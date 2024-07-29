@@ -13,6 +13,7 @@ public partial class WordPage
     private bool isLoading;
     private string? searchText;
     private string? selectedSort;
+    private bool showAddOrEditBox;
     private string? selectedFilter;
     private WordDto wordModel = new();
     private BitSnackBar snackBar = default!;
@@ -93,7 +94,7 @@ public partial class WordPage
 
     private void EditMode(WordDto word)
     {
-        word.IsInEditMode = true;
+        showAddOrEditBox = true;
         wordModel = word;
     }
 
@@ -105,6 +106,8 @@ public partial class WordPage
 
         try
         {
+            ClearValues();
+
             if (wordModel.IsInEditMode is false)
             {
                 var addedWord = await wordController.Create(wordModel, CurrentCancellationToken);
@@ -121,12 +124,24 @@ public partial class WordPage
                 await UpdateWord(wordModel);
             }
 
+            await snackBar.Success(Localizer.GetString(nameof(AppStrings.Success)), Localizer.GetString(nameof(AppStrings.DataSavedSuccessfully)));
+
             wordModel = new();
         }
         finally
         {
             isAdding = false;
         }
+    }
+
+    private void ClearValues()
+    {
+        wordModel.MainWord.TrimIfNotNull();
+        wordModel.Pronunciation.TrimIfNotNull();
+        wordModel.EnglishMeaning.TrimIfNotNull();
+        wordModel.PersianMeaning.TrimIfNotNull();
+        wordModel.Example.TrimIfNotNull();
+        wordModel.Description.TrimIfNotNull();
     }
 
     private async Task DeleteWord(WordDto word)
@@ -149,6 +164,8 @@ public partial class WordPage
                 allWords.Remove(word);
 
                 viewWords.Remove(word);
+
+                await snackBar.Success(Localizer.GetString(nameof(AppStrings.Success)), Localizer.GetString(nameof(AppStrings.DataRemovedSuccessfully)));
             }
         }
         finally
@@ -190,8 +207,6 @@ public partial class WordPage
     private async Task UpdateWord(WordDto word)
     {
         (await wordController.Update(word, CurrentCancellationToken)).Patch(word);
-
-        word.IsInEditMode = false;
 
         if (WordIsVisible(word) is false)
         {
